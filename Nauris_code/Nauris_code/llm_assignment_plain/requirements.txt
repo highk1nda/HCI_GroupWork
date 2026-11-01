@@ -1,5 +1,0 @@
-openai>=1.0.0
-# openai SDK here is used for Groq's compatible API, NOT OpenAI billing.
-google-genai>=1.0.0
-python-dotenv>=1.0.0
-matplotlib>=3.7.0
