@@ -20,9 +20,32 @@ By that it means it should assign tasks for each project member what to do and u
 
 Lastly, we had to decide who is going to be the project manager and to make it fair, we made voting.
 Each member voted for a person who will be manager for this project and the result was that Nauris won.
-He is going to be the project manager for this project.
- 
+He is going to be the project manager for this project.'
 
+First draft:
 
+To make the first draft, we had to decide on what function/buttons there will be for our program.
+We had a meeting together, 4 of us, Anton was not available that day. We discussed and decided on the program functions:
+
+Functions/buttons/workspace:
+
+- 3d workspace
+- given models
+- add mouse and keyboard for start
+- microphone option, webcam option
+- choice option of the input
+- different colors for models
+- option make bigger or smaller models (stretch them)
+- undo
+- redo
+- save
+- can rotate models, workspace
+- record of past actions
+- can zoom in and out
+
+Once we concluded on the functions, we decided that one of us is going to draw/sketch the first draft.
+Nauris volunteered to make the drawing. He used paint application to make the first draft (Our draft without AI.png). 
+Afterwards with help of AI he made better drawing/picture of our program (Our draft wirh AI.png) which actually might look like our final product.
+It shows functions, buttons and workspace better and more viewable.
 
 Logged by: Nauris
