@@ -1,0 +1,21 @@
+8.11.2026:
+
+Roles decision (By group):
+
+Before we started we had to decide on our roles which we did in a meeting.
+Our decision was mostly choosen by random. We spinned wheel of names.
+After each one got their roles, we could swap them, if someone wanted to.
+
+The roles are:
+
+- Thobeka -  Research lead
+- Nauris - Design lead
+- Anton - Implementation lead
+- Daniel - Evaluation lead
+- Zura - Documentation lead
+
+We discussed what does word leasdfn. 
+
+
+
+Logged by: Nauris
