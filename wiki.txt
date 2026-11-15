@@ -48,4 +48,101 @@ Nauris volunteered to make the drawing. He used paint application to make the fi
 Afterwards with help of AI he made better drawing/picture of our program (Our draft wirh AI.png) which actually might look like our final product.
 It shows functions, buttons and workspace better and more viewable.
 
+Next week: Research and design the program
+Improvements: We have to start working as a team
+
 Logged by: Nauris
+
+15.11.2026:
+
+Homework done:
+Nauris
+Daniel
+Thobeka (80%)
+
+Still waiting from:
+Zura
+Anton
+
+Research:
+
+Most of the research part was done by Thobeka and she gave tasks to other team mates (Related work, Existing products, Standards, Potential User Interview, Requirements +acceptance criteria)
+
+Daniel added information about Microsoft Dynamics 365 Layout (HoloLens) in existing products, one more standard -  Usability and in requirements +acceptance criteria added Feedback and visibility.
+
+Nauris added information about Shapr3D in existing products and one more standard - Interaction and feedback. 
+
+Daniel and Nauris did interviews with potential users and wrote summary of the interviews
+
+Design:
+
+Nauris as design leader divided the group into 3 small ones. 
+1st group: Daniel and Zura had job to design how would accessibility settings look like (page and the changeable settings), the only contrubutor was Daniel (seen bellow)
+2nd group: Thobeka and Anton had job to design program start page and had to reasearch colour and button size for most user-friendly environment.
+3rd group: Nauris had to make more detailed drawings about what each function does, find 2 more alternatives how could the program look like and if needed help others. Nauris made a seperate pdf document for the designs and functionality (Functionality_alternatives.pdf) 
+
+After seeing alternatives we decided to stick with our original version from first draft (as it was simplier and more new user-friendly)
+
+AI made (Accessibility) (Made by Daniel):
+┌─────────────────────────────────────────────────────────┐
+│ ⚙ Accessibility settings                    [Close ✕]  │
+├─────────────────────────────────────────────────────────┤
+│ INPUT METHODS                                           │
+│  Mouse + keyboard   [ always on ]                       │
+│  Voice              [ON / off]   Mode: (•)Push-to-talk  │
+│                                        ( )Always listen │
+│  Hand gestures      [ON / off]                          │
+│                                                         │
+│ VOICE                                                   │
+│  Language / accent  [English (UK) ▾]                    │
+│  Mic sensitivity    [──────●───]                        │
+│  Show what I said   [ON / off]                          │
+│                                                         │
+│ GESTURES                                                │
+│  Dominant hand      (•)Right ( )Left ( )Either          │
+│  Selection method   (•)Pinch ( )Point + hold (dwell)    │
+│  Dwell time         [──●───────] 1.0 s                  │
+│  Smoothing          [─────●────]                        │
+│  Seated / small range  [on / OFF]                       │
+│                                                         │
+│ DISPLAY                                                 │
+│  Text size          [A−] 100% [A+]                      │
+│  High contrast      [on / OFF]                          │
+│  Colour-blind safe palette [on / OFF]                   │
+│  Reduce motion      [on / OFF]                          │
+│                                                         │
+│ FEEDBACK & SAFETY                                       │
+│  Confirm before    (•)Delete only ( )All ( )None        │
+│  Sound cues         [on / OFF]                          │
+│  Command hints      [ON / off]                          │
+│                                                         │
+│ COMFORT                                                 │
+│  Rest reminder      every [10] min  [ON / off]          │
+│                                                         │
+│ PRIVACY                                                 │
+│  Camera/mic indicator  [ always on, cannot be hidden ]  │
+│  Show camera preview   [on / OFF]                       │
+│                                                         │
+│           [Reset to defaults]      [Save]               │
+└─────────────────────────────────────────────────────────┘
+Normal:
+┌──────────────────────────────────────┐
+│ [⚙] 🎤 📷 (indicator)               │
+│                                      │
+│          Camera view                 │
+│                                      │
+│ Heard: "move the sofa"               │
+└──────────────────────────────────────┘
+Rest reminder:
+│ ┌──────────────────────────────────┐ │
+│ │ 💪                               | |
+| |  You've been gesturing 10 min.   │ │
+│ │ Scene saved. [Pause] [Snooze 5m] │ │
+│ └──────────────────────────────────┘ │
+
+
+Next week: Implement the program and test it by ourseleves. 
+Improvements: Get Anton and Zura to start doing their parts.
+
+Logged by Nauris
+
