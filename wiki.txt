@@ -78,7 +78,7 @@ Design:
 
 Nauris as design leader divided the group into 3 small ones. 
 1st group: Daniel and Zura had job to design how would accessibility settings look like (page and the changeable settings), the only contrubutor was Daniel (seen bellow)
-2nd group: Thobeka and Anton had job to design program start page and had to reasearch colour and button size for most user-friendly environment, the only contrubutor was Thobeka.
+2nd group: Thobeka and Anton had job to design program start page and had to reasearch colour and button size for most user-friendly environment, the only contrubutor was Thobeka. (start_screen.pdf)
 3rd group: Nauris had to make more detailed drawings about what each function does, find 2 more alternatives how could the program look like and if needed help others. Nauris made a seperate pdf document for the designs and functionality (Functionality_alternatives.pdf) 
 
 After seeing alternatives we decided to stick with our original version from first draft (as it was simplier and more new user-friendly)
