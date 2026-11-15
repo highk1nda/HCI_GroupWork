@@ -59,9 +59,9 @@ Homework done:
 Nauris
 Daniel
 Thobeka
+Zura
 
 Still waiting from:
-Zura
 Anton
 
 Research:
@@ -142,7 +142,7 @@ Rest reminder:
 
 
 Next week: Implement the program and test it by ourseleves. 
-Improvements: Get Anton and Zura to start doing their parts.
+Improvements: Get Anton to start doing hir part.
 
 Logged by Nauris
 
