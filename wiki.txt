@@ -71,7 +71,9 @@ Daniel added information about Microsoft Dynamics 365 Layout (HoloLens) in exist
 
 Nauris added information about Shapr3D in existing products and one more standard - Interaction and feedback. 
 
+Anton added information about Spline V2 and Blender MCP in existing products
 
+Zura added information about Gravity Sketch in existing products
 
 We all did interviews with potential users and wrote summary of the interviews
 
@@ -147,3 +149,45 @@ Improvements: Still focus on teamwork as it is our biggest problem right now
 
 Logged by Nauris
 
+16.11.2026:
+
+1. Existing product research
+Researched Gravity Sketch as an additional existing product for our project. Examined its main
+strengths and weaknesses, particularly its direct manipulation approach and reliance on VR
+hardware. Considered how similar interaction methods could be adapted to our webcam-based
+gesture system.
+
+2. User research
+Reviewed the existing potential-user interview questions and prepared an interview draft for a
+beginner-level user. Focused on understanding how users interact with 3D objects, their
+preferences regarding voice and gestures, and potential concerns about accuracy, privacy and
+fatigue.
+
+3. Design research and coordination
+Reviewed the existing design work in the HCI Wiki, including the accessibility settings, voice
+and gesture controls, visual feedback and privacy indicators. Identified possible areas for further
+contribution, particularly interaction feedback and error handling.
+
+Logged by Zura
+
+
+16.11.2026:
+
+I have drafted a demo version of the app. It can do all of the basic 3D editor functions
+mentioned in the plan: save/undo/redo, a set of given models, picking colors for the
+models, and choosing the way of input (e.g. mouse & keyboard, mic only, cam only, or
+mic and cam mode). In addition, it has a rotatable and zoomable 3D workspace with
+objects that can be rotated and resized, and a visible record of past actions with revert
+to a specific action possibility.
+
+The demo is a web application that runs on JS, with Three.js for 3D object rendering. The
+scene is saved in a JSON file (for now, this still needs to be improved). Ideally, the scene
+should be saved in a format that works with other 3D editors.
+
+That took most of the past two weeks. While developing, I also did some preliminary
+research on alternative products, mainly Spline V2 and Blender MCP. Both are fairly
+popular, but they take different approaches. Spline V2's AI features are behind a paywall,
+while Blender MCP is open source and can also run on a self-hosted AI.
+
+
+Logged by Anton
