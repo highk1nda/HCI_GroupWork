@@ -71,13 +71,15 @@ Daniel added information about Microsoft Dynamics 365 Layout (HoloLens) in exist
 
 Nauris added information about Shapr3D in existing products and one more standard - Interaction and feedback. 
 
+
+
 We all did interviews with potential users and wrote summary of the interviews
 
 Design:
 
 Nauris as design leader divided the group into 3 small ones. 
-1st group: Daniel and Zura had job to design how would accessibility settings look like (page and the changeable settings), the only contrubutor was Daniel (seen bellow)
-2nd group: Thobeka and Anton had job to design program start page and had to reasearch colour and button size for most user-friendly environment, both gave alternatives of the start screen (start_screen.pdf)
+1st group: Daniel and Zura had job to design how would accessibility settings look like (page and the changeable settings), the only contrubutor was Daniel (seen bellow) - Zura will have more work in implementation
+2nd group: Thobeka and Anton had job to design program start page and had to reasearch colour and button size for most user-friendly environment, both gave different versions of the start screen (start_screen.pdf) (versions_start_page.pdf)
 3rd group: Nauris had to make more detailed drawings about what each function does, find 2 more alternatives how could the program look like and if needed help others. Nauris made a seperate pdf document for the designs and functionality (Functionality_alternatives.pdf) 
 
 After seeing alternatives we decided to stick with our original version from first draft (as it was simplier and more new user-friendly)
