@@ -144,8 +144,6 @@ Rest reminder:
 │ └──────────────────────────────────┘ │
 
 
-Next week: Implement the program (fully) and test it by ourseleves. 
-Improvements: Still focus on teamwork as it is our biggest problem right now
 
 Logged by Nauris
 
@@ -191,3 +189,13 @@ while Blender MCP is open source and can also run on a self-hosted AI.
 
 
 Logged by Anton
+
+16.11.2026:
+
+We had a meeting where we from all designs, research made slides and we together dicided that we are still gonna use our first draft as our main design.
+And the start menu has been decided aswell.
+
+Next week: Implement the program (fully) and test it by ourseleves. 
+Improvements: Still focus on teamwork as it is our biggest problem right now.
+
+Logged by Nauris
