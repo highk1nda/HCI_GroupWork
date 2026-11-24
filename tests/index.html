@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unit tests</title>
+    <style>
+      body {
+        font: 14px/1.5 system-ui, sans-serif;
+        margin: 24px;
+        background: #f6f6f3;
+        color: #1d1d1b;
+      }
+      h1 {
+        font-size: 18px;
+      }
+      li.pass::marker {
+        content: '✓  ';
+        color: #2e7d32;
+      }
+      li.fail::marker {
+        content: '✗  ';
+        color: #c62828;
+      }
+      li.fail {
+        color: #c62828;
+      }
+      pre {
+        margin: 2px 0 8px;
+        white-space: pre-wrap;
+      }
+      #summary.ok {
+        color: #2e7d32;
+      }
+      #summary.bad {
+        color: #c62828;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>History + parser unit tests</h1>
+    <p id="summary">Running…</p>
+    <ul id="results"></ul>
+    <script type="module" src="./tests.js"></script>
+  </body>
+</html>

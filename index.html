@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Demo</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+          "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <section class="card group" aria-labelledby="file-title">
+          <h2 id="file-title">File</h2>
+          <div class="row">
+            <button id="btn-save" title="Save and download scene.json (Ctrl+S)">Save</button>
+            <button id="btn-undo" title="Undo (Ctrl+Z)">Undo</button>
+            <button id="btn-redo" title="Redo (Ctrl+Y)">Redo</button>
+            <span class="sep" aria-hidden="true"></span>
+            <button id="btn-load" class="quiet" title="Load a scene.json file">Load</button>
+            <button id="btn-new" class="quiet" title="Start a new scene (clears objects and history)">New</button>
+            <button id="btn-clear" class="quiet" title="Remove all objects (undoable)">Clear</button>
+          </div>
+        </section>
+
+        <section class="card group grow" aria-labelledby="models-title">
+          <h2 id="models-title">Models</h2>
+          <div class="row" id="model-buttons"></div>
+        </section>
+
+        <section class="card group" aria-labelledby="colors-title">
+          <h2 id="colors-title">Colors</h2>
+          <div class="row swatches" id="swatches"></div>
+        </section>
+
+        <section class="card group" aria-labelledby="input-title">
+          <h2 id="input-title">Input</h2>
+          <div class="row">
+            <div class="row" id="input-buttons" role="radiogroup" aria-labelledby="input-title"></div>
+            <span class="sep" aria-hidden="true"></span>
+            <button id="btn-hands" class="quiet" title="Hand settings: record gestures">Hands</button>
+          </div>
+        </section>
+      </header>
+
+      <aside class="card history" aria-labelledby="history-title">
+        <h2 id="history-title">Past actions</h2>
+        <ol id="history-list"></ol>
+      </aside>
+
+      <main class="workspace" id="workspace">
+        <button class="option-panel dummy" id="option-panel" type="button">
+          Mic / webcam options
+          <span>coming soon</span>
+        </button>
+
+        <div class="start-hint" id="start-hint">
+          <div class="hint-icons" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="2.5" width="12" height="19" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="12" y1="2.5" x2="12" y2="9" stroke="currentColor" stroke-width="1.6"/></svg>
+            <svg viewBox="0 0 24 24" width="26" height="22"><rect x="1.5" y="5" width="21" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 9h1M8 9h1M11 9h1M14 9h1M17 9h2M5 12h1M8 12h1M11 12h1M14 12h1M17 12h2M7 15.5h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <strong>Mouse + keyboard</strong>
+            <p>LMB drag to rotate · wheel to zoom · click to select</p>
+            <p class="keys">Add a model with the toolbar or keys <kbd>1</kbd>–<kbd>6</kbd></p>
+          </div>
+        </div>
+
+        <div class="cam-preview" id="cam-preview" hidden>
+          <video id="cam-video" playsinline muted></video>
+          <canvas id="cam-overlay"></canvas>
+          <span class="cam-status" id="cam-status"></span>
+          <button class="cam-gear" id="cam-gear" type="button" title="Hand settings" aria-label="Hand settings">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          </button>
+        </div>
+      </main>
+
+      <footer class="card statusbar">
+        <span id="status-text" class="status-text"></span>
+        <div class="zoom">
+          <output id="zoom-value" aria-label="Zoom level">100%</output>
+          <button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+          <button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="card cam-dialog" id="cam-dialog" aria-label="Camera source"></dialog>
+    <dialog class="card hand-dialog" id="hand-dialog" aria-label="Hand settings"></dialog>
+    <input type="file" id="gesture-input" accept=".json,application/json" hidden />
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <input type="file" id="load-input" accept=".json,application/json" hidden />
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

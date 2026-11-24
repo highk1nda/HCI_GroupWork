@@ -1,0 +1,8 @@
+# private, not part of the project
+keylog.py
+keystrokes.log
+*.log
+
+# local Claude Code settings
+.claude/*
+plan_folders/*

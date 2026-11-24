@@ -1,0 +1,3 @@
+Run this line below in the main directory, then open http://localhost:5173
+
+python -m http.server 5173
