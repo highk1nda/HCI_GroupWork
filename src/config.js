@@ -5,7 +5,7 @@ export const FEATURES = {
   voice: true, // mic push-to-talk in the AI chat + the top Mic mode
   camera: true, // Cam mode: camera preview + hand skeleton
   gestures: true, // Hand settings: record poses / motions and recognize them
-  vdoNinja: false, // VDO.Ninja as a video source in the camera picker
+  vdoNinja: true, // Accept VDO.Ninja view links as camera sources // VDO.Ninja as a video source in the camera picker
   ai: true, // AI assistant chat panel (LM Studio)
 };
 

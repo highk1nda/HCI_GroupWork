@@ -100,6 +100,10 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <input type="file" id="load-input" accept=".json,application/json" hidden />
 
+    <!-- Browser build of the official VDO.Ninja SDK (pinned version). The SDK is used to connect to a remote camera through WebRTC.
+    Instead of simply displaying a VDO.Ninja webpage, application can receive a video stream that the existing hand-tracking system can process.-->
+    <script src="https://cdn.jsdelivr.net/npm/@vdoninja/sdk@1.6.2/vdoninja-sdk.min.js"></script>
+
     <script type="module" src="src/main.js"></script>
   </body>
 </html>

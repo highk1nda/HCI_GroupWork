@@ -24,11 +24,27 @@ export function openSourcePicker(opts) {
       <span>Your webcam. The browser will ask for permission.</span>
       <em class="last-used" hidden>Last used</em>
     </button>
-    <div class="source-option dummy" id="src-vdo" role="button" tabindex="0" aria-disabled="true">
+
+    // Creates a field where you paste the VDO.Ninja link and a button to connect.
+   <div class="source-option vdo-option" id="src-vdo">
       <strong>VDO.Ninja link</strong>
-      <input type="text" placeholder="https://vdo.ninja/?view=…" disabled />
-      <span>coming soon</span>
+      <span>Use the VIEW link for a live phone or remote camera.</span>
+      <input
+        type="url"
+        id="vdo-link"
+        placeholder="https://vdo.ninja/?view=YOUR_STREAM_ID"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="button" id="src-vdo-connect">
+        Connect camera
+      </button>
+      <em class="last-used" id="vdo-last-used" hidden>
+        Last used
+      </em>
     </div>
+
+    
     <label class="cam-select-row" id="cam-select-row" hidden>
       Camera
       <select id="cam-select"></select>
