@@ -26,7 +26,7 @@ export function openSourcePicker(opts) {
     </button>
 
     // Creates a field where you paste the VDO.Ninja link and a button to connect.
-   <div class="source-option vdo-option" id="src-vdo">
+    <div class="source-option vdo-option" id="src-vdo">
       <strong>VDO.Ninja link</strong>
       <span>Use the VIEW link for a live phone or remote camera.</span>
       <input
@@ -44,7 +44,7 @@ export function openSourcePicker(opts) {
       </em>
     </div>
 
-    
+
     <label class="cam-select-row" id="cam-select-row" hidden>
       Camera
       <select id="cam-select"></select>
@@ -55,6 +55,9 @@ export function openSourcePicker(opts) {
   const q = (sel) => dialog.querySelector(sel); // shortcut to find elements inside the dialog
   const deviceBtn = q('#src-device');
   const vdo = q('#src-vdo');
+  //gives JavaScript access to the new input field and button
+  const vdoLink = q('#vdo-link');
+  const vdoConnect = q('#src-vdo-connect');
   const row = q('#cam-select-row');
   const select = /** @type {HTMLSelectElement} */ (q('#cam-select'));
   const status = q('#cam-dialog-status');
@@ -97,14 +100,31 @@ export function openSourcePicker(opts) {
   deviceBtn.addEventListener('click', () => choose({ kind: 'device', deviceId: opts.saved?.deviceId }));
   select.addEventListener('change', () => choose({ kind: 'device', deviceId: select.value, exact: true }));
 
-  // VDO.Ninja: dummy until FEATURES.vdoNinja is on
+  // VDO.Ninja: makes the Connect camera button work and allows you to press Enter to connect
   const pickVdo = () => {
-    if (!FEATURES.vdoNinja) return toast('Coming soon');
-    choose({ kind: 'vdoNinja', url: q('#src-vdo input').value });
+    if (!FEATURES.vdoNinja)
+      return toast('VDO.Ninja input is disabled');
+
+    if (!vdoLink.value.trim()) {
+      status.textContent =
+        'Paste the VIEW link from your phone camera first.';
+      vdoLink.focus();
+      return;
+    }
+
+    choose({
+      kind: 'vdoNinja',
+      url: vdoLink.value.trim()
+    });
   };
-  vdo.addEventListener('click', pickVdo);
-  vdo.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') pickVdo();
+
+  vdoConnect.addEventListener('click', pickVdo);
+
+  vdoLink.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      pickVdo();
+    }
   });
 
   closeBtn.addEventListener('click', () => dialog.close());
